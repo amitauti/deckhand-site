@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Deckhand</title>
+  <meta name="description" content="Deckhand Privacy Policy. True local-first architecture: no accounts, no tracking, no analytics, no third-party servers.">
+  <style>
+    :root {
+      --bg: #0E1B2A;
+      --card-bg: #1C2B3A;
+      --surface: #25384B;
+      --border: #2D4257;
+      --brass: #D9A441;
+      --brass-light: #F3D078;
+      --fog: #C9D3DC;
+      --muted: #7D8F9F;
+      --teal: #4FB3A9;
+      --red: #E5533D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fog);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .brand-mark .cleat-glyph {
+      color: var(--brass);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .effective-date {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .highlight-box {
+      background: rgba(79, 179, 169, 0.1);
+      border-left: 4px solid var(--teal);
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin: 2rem 0;
+      color: #FFFFFF;
+    }
+
+    .highlight-box strong {
+      color: var(--teal);
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::before {
+      content: "›";
+      color: var(--brass);
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    li strong {
+      color: #FFFFFF;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    a {
+      color: var(--brass-light);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--brass);
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #FFFFFF;
+      border-bottom-style: solid;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 3.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.85rem; }
+      body { padding: 1.5rem 1rem; }
+      .footer-links { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="brand-mark">
+        <span class="cleat-glyph">›</span> Deckhand
+      </a>
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">Effective Date: November 9, 2026</p>
+    </header>
+
+    <div class="highlight-box">
+      <strong>Core Commitment:</strong> Deckhand is built from the ground up on a local-first architecture. We do not collect, store, monetize, or transmit your personal information, server hostnames, credentials, or terminal traffic. There are no user accounts, no telemetry frameworks, and no Deckhand-owned servers.
+    </div>
+
+    <section>
+      <h2>1. Information We Do Not Collect</h2>
+      <p>Deckhand does not collect or transmit any data to the developer or any third-party infrastructure. Specifically:</p>
+      <ul>
+        <li><strong>No Personal Information:</strong> We do not ask for or collect your name, email address, physical location, phone number, or payment details.</li>
+        <li><strong>No Account Required:</strong> Deckhand functions completely without user registration, profiles, or authentication against our infrastructure.</li>
+        <li><strong>No Analytics or Tracking:</strong> There are zero third-party telemetry, analytics, ad networks, or crash-reporting SDKs bundled in Deckhand (no Firebase, no Mixpanel, no Sentry, no Google Analytics, no Facebook SDK).</li>
+        <li><strong>No Terminal Content Access:</strong> The developer has no access to the commands you run, output produced, directory trees, files edited, or server responses.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Direct Peer-to-Peer Communication</h2>
+      <p>Deckhand is an SSH client. When you connect to a server:</p>
+      <ul>
+        <li>All network communication occurs directly between your iOS/iPadOS device and the remote SSH host(s) specified by you.</li>
+        <li>Traffic is encrypted end-to-end using standard, cryptographically audited SSH protocols (RFC 4251-4254).</li>
+        <li>If you use an overlay mesh network such as Tailscale or WireGuard, your traffic traverses that network directly according to your private network configuration. Deckhand introduces no intermediate relays.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Where Your Secrets & Keys Are Stored</h2>
+      <div class="card">
+        <p>All sensitive credentials and connection metadata remain strictly on your physical device:</p>
+        <ul>
+          <li><strong>Secure Enclave Keys:</strong> When you generate a Secure Enclave key (NIST P-256), the private key is generated and stored inside your device's dedicated hardware Secure Enclave. The private key material cannot be exported, copied, or backed up.</li>
+          <li><strong>Imported SSH Keys & Passwords:</strong> Keys and passwords are saved in the iOS Keychain with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>, preventing them from transferring to other devices or syncing via standard unencrypted backups.</li>
+          <li><strong>Host Configuration:</strong> Server addresses, port numbers, labels, and pinned host-key fingerprints are stored in local application sandboxed files with complete file protection (<code>NSFileProtectionComplete</code>), remaining encrypted at rest while the device is locked.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Biometric Authentication (Face ID / Touch ID)</h2>
+      <p>Deckhand provides an optional biometric lock to protect your saved SSH keys and passwords:</p>
+      <ul>
+        <li>Authentication is performed entirely on-device by iOS using the <code>LocalAuthentication</code> framework.</li>
+        <li>Deckhand never receives, accesses, or stores your biometric templates or facial geometry data. The operating system only returns a cryptographic success or failure verification.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Clipboard & Screen Privacy</h2>
+      <ul>
+        <li><strong>Local-Only Clipboard:</strong> When copying text from terminal sessions, Deckhand tags clipboard data as local-only, preventing universal clipboard synchronization across your other devices.</li>
+        <li><strong>Expiring Pasteboard:</strong> Terminal copies automatically expire and clear from the pasteboard after a configurable timeout (default: 60 seconds).</li>
+        <li><strong>App Switcher Masking:</strong> When Deckhand moves to the background or the iOS App Switcher is activated, the application window is obscured with a privacy shield to prevent shoulder-surfing and thumbnail capture of terminal contents.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Cloud Synchronization Policy</h2>
+      <p><strong>Cloud synchronization is NOT included in version 1.0.</strong> Your host configurations, keys, and session settings remain solely on the device where they were created.</p>
+      <p>If optional host-metadata synchronization is introduced in future releases, it will be strictly opt-in, will utilize your personal private Apple iCloud database (CloudKit), and will synchronize non-sensitive connection metadata only (e.g., hostnames, labels, and ports). Private keys and passwords will never be synchronized to any cloud service.</p>
+    </section>
+
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>Deckhand does not address or collect data from anyone, including children under the age of 13. The application is rated 4+ as a general utility tool with no user-generated social content.</p>
+    </section>
+
+    <section>
+      <h2>8. Policy Updates</h2>
+      <p>We may update this Privacy Policy from time to time. Any revisions will be reflected on this page with an updated "Effective Date." Since Deckhand collects no email addresses or contact details, we encourage users to review this page periodically.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or our security practices, please contact us directly:</p>
+      <p><strong>Email:</strong> <a href="mailto:amitauti.media@gmail.com">amitauti.media@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <div>&copy; 2026 Amit Auti. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Overview</a>
+        <a href="support.html">Support & FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

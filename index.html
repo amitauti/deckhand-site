@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deckhand — SSH Terminal & Agent Inbox for iOS & iPadOS</title>
+  <meta name="description" content="Deckhand: High-performance SSH terminal and Herdr coding agent supervisor for iPhone and iPad. Local-first security, Secure Enclave keys, tmux persistence.">
+  <style>
+    :root {
+      --bg: #0E1B2A;
+      --card-bg: #1C2B3A;
+      --surface: #25384B;
+      --border: #2D4257;
+      --brass: #D9A441;
+      --brass-light: #F3D078;
+      --fog: #C9D3DC;
+      --muted: #7D8F9F;
+      --teal: #4FB3A9;
+      --red: #E5533D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fog);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+    }
+
+    .hero-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      color: #FFFFFF;
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 span {
+      color: var(--brass-light);
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--brass);
+      color: #0E1B2A;
+    }
+
+    .btn-primary:hover {
+      background: var(--brass-light);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--fog);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface);
+      color: #FFFFFF;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+    }
+
+    .card h3 {
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3 .icon {
+      color: var(--brass);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--fog);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    footer a {
+      color: var(--brass-light);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.1rem; }
+      .hero { padding-top: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <img src="icon/icon_1024.png" alt="Deckhand App Icon" class="hero-icon">
+      <h1>Deckhand: <span>SSH &amp; Agents</span></h1>
+      <p class="tagline">An iOS and iPadOS terminal client engineered for remote servers, persistent tmux sessions, and autonomous coding agents.</p>
+      <div class="cta-row">
+        <a href="support.html" class="btn btn-primary">Support &amp; FAQ</a>
+        <a href="privacy.html" class="btn btn-secondary">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="card">
+        <h3><span class="icon">›</span> Unblock Coding Agents</h3>
+        <p>Direct integration with Herdr. Inspect active workspaces, receive real-time notifications of blocked agents, and submit prompts directly from your phone.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="icon">›</span> Secure Enclave Keys</h3>
+        <p>Generate NIST P-256 keys backed by hardware Secure Enclave. Private keys never leave your physical device and are gated with Face ID.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="icon">›</span> Resilient Reconnects</h3>
+        <p>Multi-endpoint fallback automatically cycles through Tailscale, local LAN, and public domain IP addresses. Reattaches to persistent tmux sessions seamlessly.</p>
+      </div>
+
+      <div class="card">
+        <h3><span class="icon">›</span> Zero Data Collected</h3>
+        <p>No user accounts, no telemetry, no tracking SDKs, and no middleman servers. All connections flow directly between your device and your servers.</p>
+      </div>
+    </div>
+
+    <footer>
+      <div>&copy; 2026 Amit Auti. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:amitauti.media@gmail.com">Contact</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

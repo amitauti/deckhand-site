@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & FAQ — Deckhand</title>
+  <meta name="description" content="Deckhand Support, Frequently Asked Questions, Setup Guides, and Security Playbook.">
+  <style>
+    :root {
+      --bg: #0E1B2A;
+      --card-bg: #1C2B3A;
+      --surface: #25384B;
+      --border: #2D4257;
+      --brass: #D9A441;
+      --brass-light: #F3D078;
+      --fog: #C9D3DC;
+      --muted: #7D8F9F;
+      --teal: #4FB3A9;
+      --red: #E5533D;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fog);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .brand-mark .cleat-glyph {
+      color: var(--brass);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::before {
+      content: "›";
+      color: var(--brass);
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #FFFFFF;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    li strong {
+      color: #FFFFFF;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+    }
+
+    .alert-card {
+      background: rgba(229, 83, 61, 0.08);
+      border-left: 4px solid var(--red);
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .alert-card strong {
+      color: var(--red);
+    }
+
+    .tip-card {
+      background: rgba(79, 179, 169, 0.08);
+      border-left: 4px solid var(--teal);
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    .tip-card strong {
+      color: var(--teal);
+    }
+
+    code {
+      background: #111e2e;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.2rem 0.4rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      color: var(--brass-light);
+    }
+
+    pre {
+      background: #09121c;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    pre code {
+      background: transparent;
+      border: none;
+      padding: 0;
+      color: var(--fog);
+      font-size: 0.88rem;
+    }
+
+    a {
+      color: var(--brass-light);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--brass);
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #FFFFFF;
+      border-bottom-style: solid;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 3.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.85rem; }
+      body { padding: 1.5rem 1rem; }
+      .footer-links { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="brand-mark">
+        <span class="cleat-glyph">›</span> Deckhand
+      </a>
+      <h1>Support & Documentation</h1>
+      <p class="subtitle">Configuration guides, troubleshooting, and security recovery playbook</p>
+    </header>
+
+    <section>
+      <h2>What is Deckhand?</h2>
+      <p>Deckhand is a high-performance SSH terminal and coding agent supervisor designed for iPhone and iPad. It allows developers and system administrators to connect securely to remote Linux, macOS, or BSD servers, attach to persistent tmux sessions, and supervise autonomous coding agents via <a href="https://github.com/firstmate/herdr" target="_blank" rel="noopener">Herdr</a>.</p>
+      
+      <div class="card">
+        <h3>System Requirements</h3>
+        <ul>
+          <li><strong>iOS & iPadOS:</strong> Version 26.0 or later recommended (compatible with modern iPhone and iPad hardware).</li>
+          <li><strong>Remote Host:</strong> Any standard OpenSSH server (sshd) supporting password, Ed25519, or ECDSA authentication.</li>
+          <li><strong>Agent Supervision (Optional):</strong> Remote server running <code>herdr</code> version 0.9.1 or higher.</li>
+          <li><strong>Mesh Networking (Optional):</strong> Tailscale iOS application installed on device if connecting via Tailscale 100.x.y.z addresses.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="card">
+        <h3>1. How do I add my Deckhand public key to my server?</h3>
+        <p>To authenticate using a public key generated in Deckhand:</p>
+        <ol>
+          <li>Open Deckhand and tap <strong>Keys</strong> in the navigation bar.</li>
+          <li>Tap your key (e.g. <em>Secure Enclave P-256</em> or <em>Ed25519</em>).</li>
+          <li>Tap <strong>Copy Public Key</strong> (or display the QR code).</li>
+          <li>On your remote server, append this key to your user's <code>~/.ssh/authorized_keys</code> file:</li>
+        </ol>
+        <pre><code>mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh
+echo "PASTE_PUBLIC_KEY_HERE" &gt;&gt; ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys</code></pre>
+      </div>
+
+      <div class="card">
+        <h3>2. Why does my connection fail or say Tailscale looks unreachable?</h3>
+        <p>If you are connecting to a server via a Tailscale MagicDNS hostname or <code>100.x.y.z</code> IP address:</p>
+        <ul>
+          <li>Verify that the <strong>Tailscale VPN</strong> is active and connected in your iOS Settings or Tailscale app.</li>
+          <li>Ensure that your target device is online in your Tailscale admin console.</li>
+          <li><strong>Pro Tip:</strong> Configure <em>Fallback Endpoints</em> in Deckhand's Host Editor. You can provide both your server's Tailscale IP and its local Wi-Fi LAN IP (e.g., <code>192.168.1.50</code>). Deckhand will automatically attempt fallback addresses without hanging.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>3. Host Key Verification Failed / Host Key Changed Warning</h3>
+        <div class="alert-card">
+          <strong>Security Warning:</strong> Deckhand strictly enforces Host Key Pinning on first use. If a server presents a host key fingerprint different from what you previously trusted, Deckhand will block the connection immediately to protect you from Man-in-the-Middle (MitM) attacks.
+        </div>
+        <p>If you recently reinstalled your server OS or deliberately regenerated your server's SSH host keys:</p>
+        <ol>
+          <li>Open Deckhand <strong>Settings › Known Hosts</strong>.</li>
+          <li>Find the server entry and swipe left to delete the pinned fingerprint.</li>
+          <li>Reconnect to the server. You will be prompted to inspect and trust the new host key fingerprint.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h3>4. Face ID was re-enrolled and my key stopped working</h3>
+        <p>For maximum security, keys generated in the <strong>Secure Enclave</strong> are bound to the user's biometric state. If you reset Face ID, add an alternate appearance, or reset device biometrics:</p>
+        <ul>
+          <li>iOS marks the existing biometric access control token as invalidated.</li>
+          <li>This is an intentional operating system security measure to prevent unauthorized access if someone adds their face to your phone.</li>
+          <li>To resolve: generate a new key in Deckhand, export its public key, and add it to your server's <code>authorized_keys</code>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>5. How does the Herdr Agents inbox work?</h3>
+        <p>Deckhand integrates natively with Herdr over your authenticated SSH connection:</p>
+        <ul>
+          <li>When you open the <strong>Agents</strong> tab, Deckhand queries the remote Herdr daemon socket.</li>
+          <li>If an agent enters a <code>blocked</code> state (such as requiring permission to run a command or requesting clarification), Deckhand flags it with the <strong>⚑ Needs you</strong> signal badge.</li>
+          <li>You can tap the agent card to review the context and submit quick answers or keystrokes (such as <code>1</code>, <code>Enter</code>, or <code>Esc</code>) directly from your phone.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lost or Stolen Device Playbook</h2>
+      <div class="alert-card">
+        <strong>Incident Response Guide:</strong> If your iPhone or iPad running Deckhand is lost, stolen, or compromised, execute these steps immediately to safeguard your server infrastructure.
+      </div>
+
+      <ol>
+        <li>
+          <strong>Revoke the Public Key on Your Servers:</strong>
+          <p>SSH into your servers from a trusted computer and remove the device's public key from <code>~/.ssh/authorized_keys</code>:</p>
+          <pre><code># Open authorized_keys and delete the line containing the device key:
+nano ~/.ssh/authorized_keys</code></pre>
+        </li>
+        <li>
+          <strong>Revoke Tailscale Node Access:</strong>
+          <p>If the device was connected to your private Tailscale tailnet, log in to the <a href="https://login.tailscale.com/admin/machines" target="_blank" rel="noopener">Tailscale Admin Console</a>, locate the missing device, and click <strong>Remove Machine</strong> or expire its authorization key immediately.</p>
+        </li>
+        <li>
+          <strong>Terminate Active Sessions:</strong>
+          <p>Terminate any active SSH or tmux sessions that may have been left open from the device:</p>
+          <pre><code># Kill active sessions for your user:
+pkill -u $USER -t pts/0</code></pre>
+        </li>
+        <li>
+          <strong>Initiate Apple Remote Device Wipe:</strong>
+          <p>Log into <a href="https://www.icloud.com/find" target="_blank" rel="noopener">iCloud Find My</a> from any web browser and initiate <strong>Erase Device</strong>. This immediately destroys the local Secure Enclave keys and clears the encrypted application sandbox.</p>
+        </li>
+      </ol>
+      <div class="tip-card">
+        <strong>Hardware Protection Note:</strong> Because Deckhand uses Apple's hardware Secure Enclave with biometric gating, an attacker cannot extract your raw private keys even with physical possession of the hardware.
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact & Bug Reports</h2>
+      <p>Have an issue, feature request, or feedback? Reach out directly:</p>
+      <ul>
+        <li><strong>Support Email:</strong> <a href="mailto:amitauti.media@gmail.com">amitauti.media@gmail.com</a></li>
+        <li><strong>Developer:</strong> Amit Auti</li>
+      </ul>
+      <p>When reporting connection issues, please include your iOS version, server OS (e.g. Ubuntu 24.04), and OpenSSH version.</p>
+    </section>
+
+    <footer>
+      <div>&copy; 2026 Amit Auti. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="index.html">Overview</a>
+        <a href="support.html">Support & FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
